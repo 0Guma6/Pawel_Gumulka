@@ -1,0 +1,142 @@
+<!doctype html>
+<html>
+<head>
+<link rel="stylesheet" href="styl.css">
+<title>Zadanie 13 tabele</title>
+<meta charset="UTF-8"/>
+<meta name="keywords" content="Słowa kluczowe oddzielone przecinkami"/>
+<meta name="autor" content="Paweł Gumułka" /> 
+<meta name="robots" content="all" />
+<style>
+/* Global styles for all tables */
+table {
+    border-collapse: collapse;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    text-align: center;
+    width: 80%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+th {
+    background-color: #007BFF;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+td {
+    background-color: #f9f9f9;
+}
+
+tr:nth-child(even) td {
+    background-color: #f1f1f1;
+}
+
+tr:hover td {
+    background-color: #e2e6ea;
+}
+
+/* Specific styles for different rows/columns */
+#blue {
+    background-color: #ffe5cc !important; /* Jasny pomarańczowy */
+}
+
+#ulblue {
+    background-color: #d6e9ff !important; /* Niebieski bardzo jasny */
+}
+
+#lblue {
+    background-color: #b3d9ff !important; /* Niebieski jasny */
+}
+
+#blue {
+    background-color: #80bfff !important; /* Niebieski mocniejszy */
+}
+
+/* Special class for merged cells */
+.merged {
+    background-color: #ffd966;
+    color: #333;
+    font-weight: bold;
+    border: 2px dashed #ffa500;
+}
+</style>
+</head> 
+<body> 
+<center>
+<h1>Tabela bez scalania</h1>
+<table>
+<tr id="blue">
+<th>1</th> <th>2</th> <th>3</th> <th>4</th> <th>5</th> <th>6</th>
+</tr>
+<tr>
+<th id="blue">2</th> <td>a</td> <td id="ulblue">b</td> <td id="ulblue">c</td> <td>d</td> <td>e</td>
+</tr>
+<tr>
+<th id="blue">3</th> <td>f</td> <td>g</td> <td>h</td> <td>i</td> <td id="lblue">j</td>
+</tr>
+<tr>
+<th id="blue">4</th> <td>k</td> <td>l</td> <td>m</td> <td>n</td> <td id="lblue">o</td>
+</tr>
+<tr>
+<th id="blue">5</th> <td id="blue">p</td> <td id="blue">q</td> <td id="blue">r</td> <td>s</td> <td>t</td>
+</tr>
+<tr>
+<th id="blue">6</th> <td id="blue">u</td> <td id="blue">v</td> <td id="blue">w</td> <td>y</td> <td>z</td>
+</tr>
+</table>
+<br>
+<h1>Tabela z scalaniem</h1>
+<table>
+<tr id="blue">
+<th>1</th> <th>2</th> <th>3</th> <th>4</th> <th>5</th> <th>6</th>
+</tr>
+<tr>
+<th id="blue">2</th> <td>a</td> <td colspan="2" id="ulblue">b, c</td> <td>d</td> <td>e</td>
+</tr>
+<tr>
+<th id="blue">3</th> <td>f</td> <td>g</td> <td>h</td> <td>i</td> <td rowspan="2" id="lblue">j, o</td>
+</tr>
+<tr>
+<th id="blue">4</th> <td>k</td> <td>l</td> <td>m</td> <td>n</td>
+</tr>
+<tr>
+<th id="blue">5</th> <td colspan="3" rowspan="2" id="blue">p, q, r, u, v, w</td> <td>s</td> <td>t</td>
+</tr>
+<tr>
+<th id="blue">6</th> <td>y</td> <td>z</td>
+</tr>
+</table>
+<br>
+<h1>Tabela - inicjały</h1>
+<table>
+    <tr>
+        <th>1</th> <th>2</th> <th>3</th> <th>4</th> <th>5</th> <th>6</th>
+    </tr>
+    <tr>
+        <th>2</th> <td>a</td> <td>b</td> <td>c</td> <td>d</td> <td>e</td>
+    </tr>
+    <tr>
+        <th>3</th> <td colspan="2" rowspan="3" class="merged">f, g, k, l, p, q</td> <td>h</td> <td>i</td> <td>j</td>
+    </tr>
+    <tr>
+        <th>4</th> <td>m</td> <td>n</td> <td>o</td>
+    </tr>
+    <tr>
+        <th>5</th> <td>r</td> <td>s</td> <td>t</td>
+    </tr>
+    <tr>
+        <th>6</th> <td>u</td> <td>v</td> <td>w</td> <td>y</td> <td>z</td>
+    </tr>
+</table>
+</center>
+</body> 
+</html>
